@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img id="ball" src="../../anh/Ball.jpg" height="200" width="auto"/>
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="click me" onclick="moverRight()"/>
+</form>
+<script>
+        let imgball = null;
+        imgball = document.getElementById('ball');
+        function init() {
+                imgball.style.position = 'relative';
+                imgball.style.left = '0px';
+        }
+        function moverRight() {
+                imgball.style.left = parseInt(imgball.style.left) +30+'px'
+        }
+        window.onload=init();
+</script>
+</body>
+</html>
